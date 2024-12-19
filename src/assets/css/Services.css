@@ -1,0 +1,81 @@
+.service {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: #042845;
+    text-align: center;
+    z-index: 10;
+}
+
+.centered-image {
+    max-width: 60%;
+    /* 使用百分比适应不同屏幕 */
+    max-height: 40vh;
+    /* 视口高度 */
+    object-fit: contain;
+}
+
+/* 周围文字分布 */
+.service-items .service-item {
+    position: absolute;
+    max-width: 18vw;
+    background: #e9edf0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+/* 悬停时着重显示 */
+.service-items .service-item:hover {
+    background: #d2e0ef;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* 左上 */
+.service-item-left-top {
+    top: 25%;
+    left: 17%;
+}
+
+/* 左下 */
+.service-item-left-bottom {
+    bottom: 28%;
+    left: 18%;
+}
+
+/* 右上 */
+.service-item-right-top {
+    top: 25%;
+    right: 15%;
+}
+
+/* 右下 */
+.service-item-right-bottom {
+    bottom: 28%;
+    right: 19%;
+}
+
+/* 下方 */
+.service-item-bottom {
+    bottom: 10%;
+    left: 40%;
+}
