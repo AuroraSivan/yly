@@ -1,0 +1,85 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+    position: relative;
+}
+
+/* 顶部标题 */
+.contact-title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: #042845;
+    text-align: center;
+    z-index: 10;
+}
+
+/* 中间内容区域布局 */
+.contact-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-content-inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 左侧联系信息 */
+.contact-info {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-right: 20px;
+}
+
+/* 右侧二维码布局 */
+.contact-qrcodes {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-qrcodes img {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.contact-qrcodes div {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 底部区域 */
+.contact-footer {
+    background-color: #042845;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.6;
+}

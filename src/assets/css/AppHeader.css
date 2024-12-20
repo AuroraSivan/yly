@@ -1,0 +1,132 @@
+.rd-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #042845;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rd-navbar-main {
+    width: 100%;
+    max-width: 1770px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.rd-navbar-nav {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.rd-nav-item {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.2s;
+}
+
+.rd-nav-item:hover {
+    color: #81c5e4;
+}
+
+.custom-dropdown {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: #042845;
+    border: 2px solid #042845;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+.custom-dropdown .custom-item {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.2s, color 0.2s;
+    user-select: none;
+}
+
+.custom-dropdown .custom-item:hover {
+    background-color: #081a2d;
+    color: #5fbbe5;
+}
+
+/* hoverable 样式 */
+.hoverable {
+    display: inline-block;
+    backface-visibility: hidden;
+    vertical-align: middle;
+    position: relative;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hoverable:before {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+}
+
+.hoverable:hover,
+.hoverable:active,
+.hoverable:focus {
+    transform: translateY(-5px);
+}
+
+.hoverable:hover:before,
+.hoverable:active:before,
+.hoverable:focus:before {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.bounce {
+    animation: bounce-animation 0.5s;
+}
+
+@keyframes bounce-animation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
